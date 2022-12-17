@@ -37,6 +37,7 @@
   // stylistic props
   export let precision = 2;
   export let springValues = { stiffness: 0.15, damping: 0.4 };
+  export let setSpringOptions = undefined;
 
   // prepare dispatched events
   const dispatch = createEventDispatcher();
@@ -80,7 +81,7 @@
     } else {
       // update the value of the spring function for animated handles
       // whenever the values has updated
-      springPositions.set(values.map((v) => percentOf(v)));
+      springPositions.set(values.map((v) => percentOf(v)), setSpringOptions);
     }
     // set the valueLength for the next check
     valueLength = values.length;
