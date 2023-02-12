@@ -4,6 +4,7 @@
   "svelte": "src/index.js",
   "module": "dist/svelte-range-slider-pips.mjs",
   "main": "dist/svelte-range-slider-pips.js",
+  "types": "dist/SvelteRangeSliderPips.d.ts",
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "yarn run build"
