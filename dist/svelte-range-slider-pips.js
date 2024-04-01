@@ -1,7 +1,7 @@
 /**
  * svelte-range-slider-pips ~ 2.3.1
  * Multi-Thumb, Accessible, Beautiful Range Slider with Pips
- * © MPL-2.0 ~ Simon Goellner <simey.me@gmail.com> ~ 26/1/2024
+ * © MPL-2.0 ~ Simon Goellner <simey.me@gmail.com> ~ 1/4/2024
  */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -1618,17 +1618,17 @@
 
     function get_each_context$1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[65] = list[i];
-    	child_ctx[67] = i;
+    	child_ctx[66] = list[i];
+    	child_ctx[68] = i;
     	return child_ctx;
     }
 
-    // (853:6) {#if float}
+    // (854:6) {#if float}
     function create_if_block_2$1(ctx) {
     	let span;
     	let if_block0_anchor;
     	let html_tag;
-    	let raw_value = /*handleFormatter*/ ctx[21](/*value*/ ctx[65], /*index*/ ctx[67], /*percentOf*/ ctx[24](/*value*/ ctx[65])) + "";
+    	let raw_value = /*handleFormatter*/ ctx[21](/*value*/ ctx[66], /*index*/ ctx[68], /*percentOf*/ ctx[24](/*value*/ ctx[66])) + "";
     	let html_anchor;
     	let if_block0 = /*prefix*/ ctx[18] && create_if_block_4$1(ctx);
     	let if_block1 = /*suffix*/ ctx[19] && create_if_block_3$1(ctx);
@@ -1666,7 +1666,7 @@
     				if_block0 = null;
     			}
 
-    			if (dirty[0] & /*handleFormatter, values, percentOf*/ 18874369 && raw_value !== (raw_value = /*handleFormatter*/ ctx[21](/*value*/ ctx[65], /*index*/ ctx[67], /*percentOf*/ ctx[24](/*value*/ ctx[65])) + "")) html_tag.p(raw_value);
+    			if (dirty[0] & /*handleFormatter, values, percentOf*/ 18874369 && raw_value !== (raw_value = /*handleFormatter*/ ctx[21](/*value*/ ctx[66], /*index*/ ctx[68], /*percentOf*/ ctx[24](/*value*/ ctx[66])) + "")) html_tag.p(raw_value);
 
     			if (/*suffix*/ ctx[19]) {
     				if (if_block1) {
@@ -1689,7 +1689,7 @@
     	};
     }
 
-    // (855:10) {#if prefix}
+    // (856:10) {#if prefix}
     function create_if_block_4$1(ctx) {
     	let span;
     	let t;
@@ -1713,7 +1713,7 @@
     	};
     }
 
-    // (855:127) {#if suffix}
+    // (856:127) {#if suffix}
     function create_if_block_3$1(ctx) {
     	let span;
     	let t;
@@ -1737,7 +1737,7 @@
     	};
     }
 
-    // (831:2) {#each values as value, index}
+    // (832:2) {#each values as value, index}
     function create_each_block$1(ctx) {
     	let span1;
     	let span0;
@@ -1764,26 +1764,26 @@
     			attr(span0, "class", "rangeNub");
     			attr(span1, "role", "slider");
     			attr(span1, "class", "rangeHandle");
-    			attr(span1, "data-handle", span1_data_handle_value = /*index*/ ctx[67]);
-    			attr(span1, "style", span1_style_value = "" + (/*orientationStart*/ ctx[29] + ": " + /*$springPositions*/ ctx[30][/*index*/ ctx[67]] + "%; z-index: " + (/*activeHandle*/ ctx[27] === /*index*/ ctx[67] ? 3 : 2) + ";"));
-    			attr(span1, "aria-label", span1_aria_label_value = /*ariaLabels*/ ctx[22][/*index*/ ctx[67]]);
+    			attr(span1, "data-handle", span1_data_handle_value = /*index*/ ctx[68]);
+    			attr(span1, "style", span1_style_value = "" + (/*orientationStart*/ ctx[29] + ": " + /*$springPositions*/ ctx[30][/*index*/ ctx[68]] + "%; z-index: " + (/*activeHandle*/ ctx[27] === /*index*/ ctx[68] ? 3 : 2) + ";"));
+    			attr(span1, "aria-label", span1_aria_label_value = /*ariaLabels*/ ctx[22][/*index*/ ctx[68]]);
 
-    			attr(span1, "aria-valuemin", span1_aria_valuemin_value = /*range*/ ctx[2] === true && /*index*/ ctx[67] === 1
+    			attr(span1, "aria-valuemin", span1_aria_valuemin_value = /*range*/ ctx[2] === true && /*index*/ ctx[68] === 1
     			? /*values*/ ctx[0][0]
     			: /*min*/ ctx[3]);
 
-    			attr(span1, "aria-valuemax", span1_aria_valuemax_value = /*range*/ ctx[2] === true && /*index*/ ctx[67] === 0
+    			attr(span1, "aria-valuemax", span1_aria_valuemax_value = /*range*/ ctx[2] === true && /*index*/ ctx[68] === 0
     			? /*values*/ ctx[0][1]
     			: /*max*/ ctx[4]);
 
-    			attr(span1, "aria-valuenow", span1_aria_valuenow_value = /*value*/ ctx[65]);
-    			attr(span1, "aria-valuetext", span1_aria_valuetext_value = "" + (/*prefix*/ ctx[18] + pureText(/*handleFormatter*/ ctx[21](/*value*/ ctx[65], /*index*/ ctx[67], /*percentOf*/ ctx[24](/*value*/ ctx[65]))) + /*suffix*/ ctx[19]));
+    			attr(span1, "aria-valuenow", span1_aria_valuenow_value = /*value*/ ctx[66]);
+    			attr(span1, "aria-valuetext", span1_aria_valuetext_value = "" + (/*prefix*/ ctx[18] + pureText(/*handleFormatter*/ ctx[21](/*value*/ ctx[66], /*index*/ ctx[68], /*percentOf*/ ctx[24](/*value*/ ctx[66]))) + /*suffix*/ ctx[19]));
     			attr(span1, "aria-orientation", span1_aria_orientation_value = /*vertical*/ ctx[6] ? 'vertical' : 'horizontal');
     			attr(span1, "aria-disabled", /*disabled*/ ctx[10]);
     			attr(span1, "disabled", /*disabled*/ ctx[10]);
     			attr(span1, "tabindex", span1_tabindex_value = /*disabled*/ ctx[10] ? -1 : 0);
-    			toggle_class(span1, "active", /*focus*/ ctx[25] && /*activeHandle*/ ctx[27] === /*index*/ ctx[67]);
-    			toggle_class(span1, "press", /*handlePressed*/ ctx[26] && /*activeHandle*/ ctx[27] === /*index*/ ctx[67]);
+    			toggle_class(span1, "active", /*focus*/ ctx[25] && /*activeHandle*/ ctx[27] === /*index*/ ctx[68]);
+    			toggle_class(span1, "press", /*handlePressed*/ ctx[26] && /*activeHandle*/ ctx[27] === /*index*/ ctx[68]);
     		},
     		m(target, anchor) {
     			insert(target, span1, anchor);
@@ -1815,31 +1815,31 @@
     				if_block = null;
     			}
 
-    			if (dirty[0] & /*orientationStart, $springPositions, activeHandle*/ 1744830464 && span1_style_value !== (span1_style_value = "" + (/*orientationStart*/ ctx[29] + ": " + /*$springPositions*/ ctx[30][/*index*/ ctx[67]] + "%; z-index: " + (/*activeHandle*/ ctx[27] === /*index*/ ctx[67] ? 3 : 2) + ";"))) {
+    			if (dirty[0] & /*orientationStart, $springPositions, activeHandle*/ 1744830464 && span1_style_value !== (span1_style_value = "" + (/*orientationStart*/ ctx[29] + ": " + /*$springPositions*/ ctx[30][/*index*/ ctx[68]] + "%; z-index: " + (/*activeHandle*/ ctx[27] === /*index*/ ctx[68] ? 3 : 2) + ";"))) {
     				attr(span1, "style", span1_style_value);
     			}
 
-    			if (dirty[0] & /*ariaLabels*/ 4194304 && span1_aria_label_value !== (span1_aria_label_value = /*ariaLabels*/ ctx[22][/*index*/ ctx[67]])) {
+    			if (dirty[0] & /*ariaLabels*/ 4194304 && span1_aria_label_value !== (span1_aria_label_value = /*ariaLabels*/ ctx[22][/*index*/ ctx[68]])) {
     				attr(span1, "aria-label", span1_aria_label_value);
     			}
 
-    			if (dirty[0] & /*range, values, min*/ 13 && span1_aria_valuemin_value !== (span1_aria_valuemin_value = /*range*/ ctx[2] === true && /*index*/ ctx[67] === 1
+    			if (dirty[0] & /*range, values, min*/ 13 && span1_aria_valuemin_value !== (span1_aria_valuemin_value = /*range*/ ctx[2] === true && /*index*/ ctx[68] === 1
     			? /*values*/ ctx[0][0]
     			: /*min*/ ctx[3])) {
     				attr(span1, "aria-valuemin", span1_aria_valuemin_value);
     			}
 
-    			if (dirty[0] & /*range, values, max*/ 21 && span1_aria_valuemax_value !== (span1_aria_valuemax_value = /*range*/ ctx[2] === true && /*index*/ ctx[67] === 0
+    			if (dirty[0] & /*range, values, max*/ 21 && span1_aria_valuemax_value !== (span1_aria_valuemax_value = /*range*/ ctx[2] === true && /*index*/ ctx[68] === 0
     			? /*values*/ ctx[0][1]
     			: /*max*/ ctx[4])) {
     				attr(span1, "aria-valuemax", span1_aria_valuemax_value);
     			}
 
-    			if (dirty[0] & /*values*/ 1 && span1_aria_valuenow_value !== (span1_aria_valuenow_value = /*value*/ ctx[65])) {
+    			if (dirty[0] & /*values*/ 1 && span1_aria_valuenow_value !== (span1_aria_valuenow_value = /*value*/ ctx[66])) {
     				attr(span1, "aria-valuenow", span1_aria_valuenow_value);
     			}
 
-    			if (dirty[0] & /*prefix, handleFormatter, values, percentOf, suffix*/ 19660801 && span1_aria_valuetext_value !== (span1_aria_valuetext_value = "" + (/*prefix*/ ctx[18] + pureText(/*handleFormatter*/ ctx[21](/*value*/ ctx[65], /*index*/ ctx[67], /*percentOf*/ ctx[24](/*value*/ ctx[65]))) + /*suffix*/ ctx[19]))) {
+    			if (dirty[0] & /*prefix, handleFormatter, values, percentOf, suffix*/ 19660801 && span1_aria_valuetext_value !== (span1_aria_valuetext_value = "" + (/*prefix*/ ctx[18] + pureText(/*handleFormatter*/ ctx[21](/*value*/ ctx[66], /*index*/ ctx[68], /*percentOf*/ ctx[24](/*value*/ ctx[66]))) + /*suffix*/ ctx[19]))) {
     				attr(span1, "aria-valuetext", span1_aria_valuetext_value);
     			}
 
@@ -1860,11 +1860,11 @@
     			}
 
     			if (dirty[0] & /*focus, activeHandle*/ 167772160) {
-    				toggle_class(span1, "active", /*focus*/ ctx[25] && /*activeHandle*/ ctx[27] === /*index*/ ctx[67]);
+    				toggle_class(span1, "active", /*focus*/ ctx[25] && /*activeHandle*/ ctx[27] === /*index*/ ctx[68]);
     			}
 
     			if (dirty[0] & /*handlePressed, activeHandle*/ 201326592) {
-    				toggle_class(span1, "press", /*handlePressed*/ ctx[26] && /*activeHandle*/ ctx[27] === /*index*/ ctx[67]);
+    				toggle_class(span1, "press", /*handlePressed*/ ctx[26] && /*activeHandle*/ ctx[27] === /*index*/ ctx[68]);
     			}
     		},
     		d(detaching) {
@@ -1876,7 +1876,7 @@
     	};
     }
 
-    // (860:2) {#if range}
+    // (861:2) {#if range}
     function create_if_block_1$1(ctx) {
     	let span;
     	let span_style_value;
@@ -1901,7 +1901,7 @@
     	};
     }
 
-    // (866:2) {#if pips}
+    // (867:2) {#if pips}
     function create_if_block$1(ctx) {
     	let rangepips;
     	let current;
@@ -2035,7 +2035,7 @@
     			if (if_block0) if_block0.m(div, null);
     			append(div, t1);
     			if (if_block1) if_block1.m(div, null);
-    			/*div_binding*/ ctx[51](div);
+    			/*div_binding*/ ctx[52](div);
     			current = true;
 
     			if (!mounted) {
@@ -2174,7 +2174,7 @@
     			destroy_each(each_blocks, detaching);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();
-    			/*div_binding*/ ctx[51](null);
+    			/*div_binding*/ ctx[52](null);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -2239,6 +2239,7 @@
     	let { reversed = false } = $$props;
     	let { hoverable = true } = $$props;
     	let { disabled = false } = $$props;
+    	let { controlled = false } = $$props;
     	let { pips = false } = $$props;
     	let { pipstep = undefined } = $$props;
     	let { all = undefined } = $$props;
@@ -2434,15 +2435,15 @@
     			}
     		}
 
-    		// if the value has changed, update it
-    		if (values[index] !== value) {
+    		// if we're uncontrolled and the value has changed, update it
+    		if (values[index] !== value && controlled !== true) {
     			$$invalidate(0, values[index] = value, values);
     		}
 
     		// fire the change event when the handle moves,
     		// and store the previous value for the next time
     		if (previousValue !== value) {
-    			eChange();
+    			eChange(values.with(index, value));
     			previousValue = value;
     		}
 
@@ -2684,7 +2685,7 @@
     		});
     	}
 
-    	function eChange() {
+    	function eChange(values) {
     		!disabled && dispatch("change", {
     			activeHandle,
     			startValue,
@@ -2716,6 +2717,7 @@
     		if ('reversed' in $$props) $$invalidate(8, reversed = $$props.reversed);
     		if ('hoverable' in $$props) $$invalidate(9, hoverable = $$props.hoverable);
     		if ('disabled' in $$props) $$invalidate(10, disabled = $$props.disabled);
+    		if ('controlled' in $$props) $$invalidate(46, controlled = $$props.controlled);
     		if ('pips' in $$props) $$invalidate(11, pips = $$props.pips);
     		if ('pipstep' in $$props) $$invalidate(12, pipstep = $$props.pipstep);
     		if ('all' in $$props) $$invalidate(13, all = $$props.all);
@@ -2728,8 +2730,8 @@
     		if ('formatter' in $$props) $$invalidate(20, formatter = $$props.formatter);
     		if ('handleFormatter' in $$props) $$invalidate(21, handleFormatter = $$props.handleFormatter);
     		if ('ariaLabels' in $$props) $$invalidate(22, ariaLabels = $$props.ariaLabels);
-    		if ('precision' in $$props) $$invalidate(46, precision = $$props.precision);
-    		if ('springValues' in $$props) $$invalidate(47, springValues = $$props.springValues);
+    		if ('precision' in $$props) $$invalidate(47, precision = $$props.precision);
+    		if ('springValues' in $$props) $$invalidate(48, springValues = $$props.springValues);
     	};
 
     	$$self.$$.update = () => {
@@ -2740,20 +2742,20 @@
      * @param {number} val the value to clamp
      * @return {number} the value after it's been clamped
      **/
-    			 $$invalidate(50, clampValue = function (val) {
+    			 $$invalidate(51, clampValue = function (val) {
     				// return the min/max if outside of that range
     				return val <= min ? min : val >= max ? max : val;
     			});
     		}
 
-    		if ($$self.$$.dirty[0] & /*min, max, step*/ 56 | $$self.$$.dirty[1] & /*clampValue*/ 524288) {
+    		if ($$self.$$.dirty[0] & /*min, max, step*/ 56 | $$self.$$.dirty[1] & /*clampValue*/ 1048576) {
     			/**
      * align the value with the steps so that it
      * always sits on the closest (above/below) step
      * @param {number} val the value to align
      * @return {number} the value after it's been aligned
      **/
-    			 $$invalidate(49, alignValueToStep = function (val) {
+    			 $$invalidate(50, alignValueToStep = function (val) {
     				// sanity check for performance
     				if (val <= min) {
     					return fixFloat(min);
@@ -2804,7 +2806,7 @@
     			});
     		}
 
-    		if ($$self.$$.dirty[0] & /*values, max, min, percentOf, springPositions, ariaLabels*/ 29360153 | $$self.$$.dirty[1] & /*alignValueToStep, valueLength, springValues*/ 458752) {
+    		if ($$self.$$.dirty[0] & /*values, max, min, percentOf, springPositions, ariaLabels*/ 29360153 | $$self.$$.dirty[1] & /*alignValueToStep, valueLength, springValues*/ 917504) {
     			 {
     				// check that "values" is an array, or set it as array
     				// to prevent any errors in springs, or range trimming
@@ -2835,7 +2837,7 @@
     				}
 
     				// set the valueLength for the next check
-    				$$invalidate(48, valueLength = values.length);
+    				$$invalidate(49, valueLength = values.length);
 
     				if (values.length > 1 && !Array.isArray(ariaLabels)) {
     					console.warn(`'ariaLabels' prop should be an Array (https://github.com/simeydotme/svelte-range-slider-pips#slider-props)`);
@@ -2907,6 +2909,7 @@
     		bodyTouchEnd,
     		bodyKeyDown,
     		pushy,
+    		controlled,
     		precision,
     		springValues,
     		valueLength,
@@ -2939,6 +2942,7 @@
     				reversed: 8,
     				hoverable: 9,
     				disabled: 10,
+    				controlled: 46,
     				pips: 11,
     				pipstep: 12,
     				all: 13,
@@ -2951,8 +2955,8 @@
     				formatter: 20,
     				handleFormatter: 21,
     				ariaLabels: 22,
-    				precision: 46,
-    				springValues: 47
+    				precision: 47,
+    				springValues: 48
     			},
     			add_css$1,
     			[-1, -1, -1]
