@@ -1,7 +1,7 @@
 /**
  * svelte-range-slider-pips ~ 2.3.1
  * Multi-Thumb, Accessible, Beautiful Range Slider with Pips
- * © MPL-2.0 ~ Simon Goellner <simey.me@gmail.com> ~ 26/1/2024
+ * © MPL-2.0 ~ Simon Goellner <simey.me@gmail.com> ~ 6/4/2024
  */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -1623,7 +1623,7 @@
     	return child_ctx;
     }
 
-    // (853:6) {#if float}
+    // (856:6) {#if float}
     function create_if_block_2$1(ctx) {
     	let span;
     	let if_block0_anchor;
@@ -1689,7 +1689,7 @@
     	};
     }
 
-    // (855:10) {#if prefix}
+    // (858:10) {#if prefix}
     function create_if_block_4$1(ctx) {
     	let span;
     	let t;
@@ -1713,7 +1713,7 @@
     	};
     }
 
-    // (855:127) {#if suffix}
+    // (858:127) {#if suffix}
     function create_if_block_3$1(ctx) {
     	let span;
     	let t;
@@ -1737,7 +1737,7 @@
     	};
     }
 
-    // (831:2) {#each values as value, index}
+    // (834:2) {#each values as value, index}
     function create_each_block$1(ctx) {
     	let span1;
     	let span0;
@@ -1876,7 +1876,7 @@
     	};
     }
 
-    // (860:2) {#if range}
+    // (863:2) {#if range}
     function create_if_block_1$1(ctx) {
     	let span;
     	let span_style_value;
@@ -1901,7 +1901,7 @@
     	};
     }
 
-    // (866:2) {#if pips}
+    // (869:2) {#if pips}
     function create_if_block$1(ctx) {
     	let rangepips;
     	let current;
@@ -2511,6 +2511,11 @@
     		if (!disabled) {
     			const handle = index(e.target);
     			let jump = e.ctrlKey || e.metaKey || e.shiftKey ? step * 10 : step;
+
+    			if (reversed) {
+    				jump *= -1;
+    			}
+
     			let prevent = false;
 
     			switch (e.key) {
