@@ -20,6 +20,7 @@
   export let reversed = false;
   export let hoverable = true;
   export let disabled = false;
+  export let controlled = false;
 
   // range pips / values props
   export let pips = false;
@@ -345,15 +346,15 @@
       }
     }
 
-    // if the value has changed, update it
-    if (values[index] !== value) {
+    // if we're uncontrolled and the value has changed, update it
+    if (values[index] !== value && controlled !== true) {
       values[index] = value;
     }
 
     // fire the change event when the handle moves,
     // and store the previous value for the next time
     if (previousValue !== value) {
-      eChange();
+      eChange(values.with(index, value));
       previousValue = value;
     }
     return value;
@@ -596,7 +597,7 @@
     });
   }
 
-  function eChange() {
+  function eChange(values) {
     !disabled && dispatch("change", {
       activeHandle,
       startValue: startValue,
