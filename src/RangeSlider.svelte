@@ -430,6 +430,9 @@
     if ( !disabled ) {
       const handle = index(e.target);
       let jump = e.ctrlKey || e.metaKey || e.shiftKey ? step * 10 : step;
+      if ( reversed ) {
+        jump *= -1;
+      }
       let prevent = false;
 
       switch (e.key) {
